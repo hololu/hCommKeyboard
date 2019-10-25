@@ -127,6 +127,14 @@ namespace hCommKeyboard
 
         private void btnBaglan_Click(object sender, EventArgs e)
         {
+            if (btnBaglan.Text == "&Kop")
+            {
+                sp.Close();
+                groupBox1.Enabled = true;
+                btnBaglan.Text = "&Bağlan";
+                return;
+            }
+
             if (comboBox1.Text != "")
             {
                 AyarKaydet();
@@ -148,10 +156,12 @@ namespace hCommKeyboard
             }
 
             if (sp.IsOpen) {
-                btnBaglan.Enabled = false;
+                //btnBaglan.Enabled = false;
+                btnBaglan.Text = "&Kop";
                 groupBox1.Enabled = false;
             } else {
-                btnBaglan.Enabled = true;
+                //btnBaglan.Enabled = true;
+                btnBaglan.Text = "&Bağlan";
                 groupBox1.Enabled = true;
             }
         }
@@ -214,14 +224,10 @@ namespace hCommKeyboard
 
         private void AyarOku()
         {
-            //RegistryKey register;
-            //register = Registry.LocalMachine.OpenSubKey(@subkey, true);
-            //if (register.GetValue("ENTER") == null)
-            //{ }
             //Registry.CurrentUser.CreateSubKey(@subkeyR);
             Registry.CurrentUser.CreateSubKey(@subkey);
 
-            chkEnter.Checked = (bool)Registry.GetValue(keyName, "ENTER", false);
+            chkEnter.Checked = Convert.ToBoolean(Registry.GetValue(keyName, "ENTER", false));
             cmdDBit.Text = (string)Registry.GetValue(keyName, "DBit", "8"); 
             cmbBaud.Text = (string)Registry.GetValue(keyName, "Baud", "9600"); 
             cmbParite.Text = (string)Registry.GetValue(keyName, "Parite", "None"); 
@@ -233,6 +239,7 @@ namespace hCommKeyboard
             //Registry.CurrentUser.CreateSubKey(@subkeyR);
             Registry.CurrentUser.CreateSubKey(@subkey);
             if (comboBox1.Text != "") { 
+            //Registry.SetValue(keyName, "ENTER", chkEnter.Checked, RegistryValueKind.DWord);
             Registry.SetValue(keyName, "ENTER", chkEnter.Checked);
             Registry.SetValue(keyName, "DBit", cmdDBit.Text);
             Registry.SetValue(keyName, "Baud", cmbBaud.Text);
