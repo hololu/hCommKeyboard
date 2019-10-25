@@ -1,0 +1,10 @@
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\bin\Debug\hCommKeyboard.exe.config
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\bin\Debug\hCommKeyboard.exe
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\bin\Debug\hCommKeyboard.pdb
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.csprojAssemblyReference.cache
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.Form1.resources
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.Properties.Resources.resources
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.csproj.GenerateResource.cache
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.csproj.CoreCompileInputs.cache
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.exe
+D:\Calismalar\C#\hCommKeyboard\hCommKeyboard\obj\Debug\hCommKeyboard.pdb
